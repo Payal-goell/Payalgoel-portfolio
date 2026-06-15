@@ -37,8 +37,8 @@ export function Footer() {
         {/* Social icons */}
         <div className="flex items-center gap-3">
           {[
-            { Icon: Linkedin, href: "https://linkedin.com/in/payalgoel", label: "LinkedIn" },
-            { Icon: Github, href: "https://github.com/Payalgoel-coder", label: "GitHub" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
+            { Icon: Github, href: "https://github.com/Payal-goell", label: "GitHub" },
             { Icon: Mail, href: "mailto:payalgoel2006@gmail.com", label: "Email" },
           ].map(({ Icon, href, label }) => (
             <a

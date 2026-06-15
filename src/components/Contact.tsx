@@ -13,14 +13,14 @@ const methods = [
     Icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/payalgoel",
-    href: "https://linkedin.com/in/payalgoel",
+    href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     accent: "#0A66C2",
   },
   {
     Icon: Github,
     label: "GitHub",
     value: "github.com/Payalgoel-coder",
-    href: "https://github.com/Payalgoel-coder",
+    href: "https://github.com/Payal-goell",
     accent: "#7C6FE0",
   },
 ];
