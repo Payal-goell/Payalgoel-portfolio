@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // Standard Vite config for a static SPA deployable to GitHub Pages
 export default defineConfig({
-  base: "/Payalgoel-portfolio/",
+  base: "/payal-portfolio/",
   css: {
     postcss: null, // Disable PostCSS - Tailwind v4 plugin handles it
   },
