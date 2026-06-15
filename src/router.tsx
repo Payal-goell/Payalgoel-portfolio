@@ -8,7 +8,7 @@ export const getRouter = () => {
   const router = createRouter({
     routeTree,
     context: { queryClient },
-    basepath: "/payal-portfolio/",
+    basepath: "/Payalgoel-portfolio/",
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });
