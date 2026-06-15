@@ -6,8 +6,8 @@
     <title>Payal Goel | Portfolio</title>
     <meta name="theme-color" content="#0A0F1C" />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="apple-touch-icon" href="./favicon.png" />
+    <link rel="icon" type="image/png" href="/Payalgoel-portfolio/favicon.png" />
+    <link rel="apple-touch-icon" href="/Payalgoel-portfolio/favicon.png" />
     <!-- Google Fonts: Space Grotesk + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -18,13 +18,22 @@
     <script>
       // Apply theme before first paint to avoid flash
       (function () {
-        var stored = localStorage.getItem("theme");
-        var theme = stored === "light" ? "light" : "dark";
-        if (theme === "dark") document.documentElement.classList.add("dark");
+        const stored = localStorage.getItem("theme");
+        const theme = stored === "light" ? "light" : "dark";
+        
+        // Always apply dark mode by default for better UX
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+        
+        // Apply fallback styles immediately
+        document.documentElement.style.backgroundColor = theme === "dark" ? "#0A0F1C" : "#F7F9FC";
+        document.documentElement.style.color = theme === "dark" ? "#F0EDE6" : "#0D1117";
       })();
+      
       // GitHub Pages single-page app redirect
       (function () {
-        var redirect = sessionStorage.redirect;
+        const redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect !== location.href) {
           history.replaceState(null, null, redirect);
