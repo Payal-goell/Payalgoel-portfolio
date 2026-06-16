@@ -13,6 +13,7 @@ const skillGroups = [
       { name: "Dart",       icon: "🎯" },
       { name: "SQL",        icon: "🗄️" },
       { name: "HTML / CSS", icon: "🌐" },
+      { name: "Java",       icon: "☕" },
     ],
   },
   {
@@ -23,6 +24,8 @@ const skillGroups = [
       { name: "Flutter",  icon: "🐦" },
       { name: "Pandas",   icon: "🐼" },
       { name: "NumPy",    icon: "🔢" },
+      { name: "React",    icon: "⚛️" },
+      { name: "Node.js",  icon: "🟢" },
     ],
   },
   {

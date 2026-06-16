@@ -60,6 +60,11 @@ const certifications = [
     title: "Android App Development",
     issuer: "Saksham Technology · End-to-end Android development programme",
   },
+  {
+    icon: "🎓",
+    title: "BUILD WITH RAG MODEL",
+    issuer: "Professional certification in RAG model development",
+  },
 ];
 
 export function Achievements() {
