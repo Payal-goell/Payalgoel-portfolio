@@ -19,7 +19,7 @@ const methods = [
   {
     Icon: Github,
     label: "GitHub",
-    value: "github.com/Payalgoel-coder",
+    value: "github.com/Payal-goell",
     href: "https://github.com/Payal-goell",
     accent: "#7C6FE0",
   },
