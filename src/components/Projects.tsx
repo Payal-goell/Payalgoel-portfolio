@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
+import portfolioImg from "@/assets/portfolio.png";
+import indiaTravelImg from "@/assets/india-travel-explorer.png";
+import foodDeliveryImg from "@/assets/food-delivery.png";
 
 const projects = [
   {
@@ -7,11 +10,10 @@ const projects = [
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     description:
       "Engineered a high-performance portfolio with a custom design system: glassmorphism UI, JS-driven orbital animations, theme switching, and scroll-triggered reveals. Deployed via GitHub Actions CI/CD.",
-    github: "https://github.com/Payalgoel-coder",
-    live: "https://Payalgoel-coder.github.io/payal-portfolio/",
+    github: "https://github.com/Payal-goell/Payalgoel-portfolio.git",
+    live: "https://payal-goell.github.io/Payalgoel-portfolio/",
     accentBar: "linear-gradient(90deg, #00D4AA, #7C6FE0)",
-    visual: "🖥️",
-    visualBg: "linear-gradient(135deg, rgba(0,212,170,0.15), rgba(124,111,224,0.15))",
+    image: portfolioImg,
     large: true,
   },
   {
@@ -19,23 +21,21 @@ const projects = [
     tags: ["Flutter", "Dart", "Material Design"],
     description:
       "Cross-platform mobile application delivering curated travel content for Indian destinations. Built with Flutter for smooth 60fps navigation, offline-first architecture, and an adaptive layout across screen sizes.",
-    github: "https://github.com/Payalgoel-coder",
+    github: "https://github.com/Payal-goell/android-app-.git",
     live: null,
     accentBar: "linear-gradient(90deg, #F59E0B, #FCD34D)",
-    visual: "📍",
-    visualBg: "linear-gradient(135deg, rgba(245,158,11,0.15), rgba(252,211,77,0.1))",
+    image: indiaTravelImg,
     large: false,
   },
   {
-    title: "Pharma Inventory System",
-    tags: ["Python", "MySQL", "CLI"],
+    title: "TOMATO - Food Ordering Website",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Stripe", "JWT"],
     description:
-      "Backend inventory management system for pharmacy operations — stock tracking, sales logging, and low-stock alerts. Decoupled application logic from data persistence using a clean Python-MySQL interface.",
-    github: "https://github.com/Payalgoel-coder",
+      "A full-stack food ordering website built using the MERN stack. Features stripe payment integration, JSON Web Token (JWT) authentication, and an interactive frontend for seamless customer experience.",
+    github: "https://github.com/Payal-goell",
     live: null,
-    accentBar: "linear-gradient(90deg, #3B82F6, #06B6D4)",
-    visual: "💊",
-    visualBg: "linear-gradient(135deg, rgba(59,130,246,0.15), rgba(6,182,212,0.1))",
+    accentBar: "linear-gradient(90deg, #EF4444, #F97316)",
+    image: foodDeliveryImg,
     large: false,
   },
 ];
@@ -92,10 +92,14 @@ export function Projects() {
               style={{ background: first.accentBar }}
             />
             <div
-              className="flex-shrink-0 flex items-center justify-center rounded-xl"
-              style={{ width: "100%", maxWidth: "180px", minHeight: "130px", background: first.visualBg, fontSize: "58px" }}
+              className="flex-shrink-0 flex items-center justify-center rounded-xl overflow-hidden border border-white/10"
+              style={{ width: "100%", maxWidth: "180px", height: "130px" }}
             >
-              {first.visual}
+              <img
+                src={first.image}
+                alt={first.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
             </div>
             <div className="flex flex-col justify-between flex-1">
               <div>
@@ -150,10 +154,14 @@ export function Projects() {
                 style={{ background: p.accentBar }}
               />
               <div
-                className="flex items-center justify-center rounded-xl mb-5"
-                style={{ height: "86px", background: p.visualBg, fontSize: "44px" }}
+                className="flex items-center justify-center rounded-xl mb-5 overflow-hidden border border-white/10"
+                style={{ height: "140px" }}
               >
-                {p.visual}
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
               <div className="flex flex-wrap gap-1.5 mb-3">
                 {p.tags.map((t) => (
