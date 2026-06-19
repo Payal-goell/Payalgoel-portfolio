@@ -35,7 +35,7 @@ export function Contact() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -51,12 +51,17 @@ export function Contact() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)",
+        }}
       />
 
       <div
         className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-80 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(0,212,170,0.04) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(0,212,170,0.04) 0%, transparent 70%)",
+        }}
       />
 
       <div className="mx-auto max-w-3xl text-center relative z-10">
@@ -65,15 +70,14 @@ export function Contact() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-4"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Let's work{" "}
-          <span className="text-gradient">together.</span>
+          Let's work <span className="text-gradient">together.</span>
         </h2>
         <p
           className="reveal text-base mb-12 max-w-lg mx-auto"
           style={{ color: "var(--muted-foreground)" }}
         >
-          I'm open to full-time roles, freelance engagements, and technical collaborations.
-          If you have a project or opportunity worth discussing, I'd like to hear about it.
+          I'm open to full-time roles, freelance engagements, and technical collaborations. If you
+          have a project or opportunity worth discussing, I'd like to hear about it.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4">

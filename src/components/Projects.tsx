@@ -50,7 +50,7 @@ export function Projects() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -68,7 +68,9 @@ export function Projects() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -77,8 +79,7 @@ export function Projects() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-12"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Selected{" "}
-          <span className="text-gradient">Projects</span>
+          Selected <span className="text-gradient">Projects</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -118,7 +119,10 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <h3 className="font-display font-bold text-2xl mb-2" style={{ color: "var(--foreground)" }}>
+                <h3
+                  className="font-display font-bold text-2xl mb-2"
+                  style={{ color: "var(--foreground)" }}
+                >
                   {first.title}
                 </h3>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
@@ -127,15 +131,23 @@ export function Projects() {
               </div>
               <div className="flex gap-5 mt-5">
                 {first.live && (
-                  <a href={first.live} target="_blank" rel="noreferrer"
+                  <a
+                    href={first.live}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                    style={{ color: "#00D4AA" }}>
+                    style={{ color: "#00D4AA" }}
+                  >
                     <ExternalLink className="w-4 h-4" /> Live Site
                   </a>
                 )}
-                <a href={first.github} target="_blank" rel="noreferrer"
+                <a
+                  href={first.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                  style={{ color: "var(--muted-foreground)" }}>
+                  style={{ color: "var(--muted-foreground)" }}
+                >
                   <Github className="w-4 h-4" /> Source
                 </a>
               </div>
@@ -178,16 +190,26 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <h3 className="font-display font-bold text-xl mb-2" style={{ color: "var(--foreground)" }}>
+              <h3
+                className="font-display font-bold text-xl mb-2"
+                style={{ color: "var(--foreground)" }}
+              >
                 {p.title}
               </h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--muted-foreground)" }}>
+              <p
+                className="text-sm leading-relaxed flex-1"
+                style={{ color: "var(--muted-foreground)" }}
+              >
                 {p.description}
               </p>
               <div className="flex gap-4 mt-5">
-                <a href={p.github} target="_blank" rel="noreferrer"
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                  style={{ color: "#00D4AA" }}>
+                  style={{ color: "#00D4AA" }}
+                >
                   <Github className="w-4 h-4" /> Source
                 </a>
               </div>

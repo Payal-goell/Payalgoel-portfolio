@@ -47,10 +47,10 @@ function Typewriter() {
 /* ─── Orbital badges — JS-driven so text NEVER flips ───────── */
 const outerBadges = [
   { label: "Python", icon: "🐍" },
-  { label: "C++",    icon: "⚙️" },
+  { label: "C++", icon: "⚙️" },
   { label: "Power BI", icon: "📊" },
   { label: "Android", icon: "📱" },
-  { label: "AI",     icon: "🤖" },
+  { label: "AI", icon: "🤖" },
 ];
 
 const OUTER_R = 210; // radius in px (half of 420px ring)
@@ -64,11 +64,10 @@ function OrbitRing() {
 
   // refs to each badge element
   const badgeRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const dotRefs   = useRef<(HTMLDivElement | null)[]>([]);
+  const dotRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const prefersReduced =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   useEffect(() => {
     if (prefersReduced) return;
@@ -77,9 +76,7 @@ function OrbitRing() {
     const INNER_SPEED = (2 * Math.PI) / (10 * 60); // full rotation in 10s @ 60fps
 
     // Space badges evenly
-    const badgeOffsets = outerBadges.map((_, i) =>
-      (i / outerBadges.length) * 2 * Math.PI
-    );
+    const badgeOffsets = outerBadges.map((_, i) => (i / outerBadges.length) * 2 * Math.PI);
     const dotOffsets = [0, (2 * Math.PI) / 3, (4 * Math.PI) / 3];
 
     const tick = () => {
@@ -94,7 +91,7 @@ function OrbitRing() {
         const y = Math.sin(a) * OUTER_R;
         // translate to center of container (210px, 210px) then offset by badge half-width
         el.style.left = `${210 + x}px`;
-        el.style.top  = `${210 + y}px`;
+        el.style.top = `${210 + y}px`;
         // badges always upright — NO rotation applied
       });
 
@@ -105,7 +102,7 @@ function OrbitRing() {
         const x = Math.cos(a) * INNER_R;
         const y = Math.sin(a) * INNER_R;
         el.style.left = `${170 + x}px`;
-        el.style.top  = `${170 + y}px`;
+        el.style.top = `${170 + y}px`;
       });
 
       rafRef.current = requestAnimationFrame(tick);
@@ -163,12 +160,14 @@ function OrbitRing() {
         {outerBadges.map((badge, i) => (
           <div
             key={badge.label}
-            ref={(el) => { badgeRefs.current[i] = el; }}
+            ref={(el) => {
+              badgeRefs.current[i] = el;
+            }}
             className="absolute"
             style={{
               // Initial position — JS will override each frame
               left: `${210 + Math.cos((i / outerBadges.length) * 2 * Math.PI) * OUTER_R}px`,
-              top:  `${210 + Math.sin((i / outerBadges.length) * 2 * Math.PI) * OUTER_R}px`,
+              top: `${210 + Math.sin((i / outerBadges.length) * 2 * Math.PI) * OUTER_R}px`,
               transform: "translate(-50%, -50%)",
               background: "var(--surface, rgba(10,15,28,0.9))",
               border: "1px solid rgba(0,212,170,0.5)",
@@ -204,11 +203,13 @@ function OrbitRing() {
         {[0, 1, 2].map((i) => (
           <div
             key={i}
-            ref={(el) => { dotRefs.current[i] = el; }}
+            ref={(el) => {
+              dotRefs.current[i] = el;
+            }}
             className="absolute"
             style={{
               left: `${170 + Math.cos((i / 3) * 2 * Math.PI) * INNER_R}px`,
-              top:  `${170 + Math.sin((i / 3) * 2 * Math.PI) * INNER_R}px`,
+              top: `${170 + Math.sin((i / 3) * 2 * Math.PI) * INNER_R}px`,
               transform: "translate(-50%, -50%)",
               width: "8px",
               height: "8px",
@@ -275,10 +276,8 @@ export function Hero() {
         </div>
 
         <div className="mx-auto max-w-6xl px-4 w-full grid lg:grid-cols-5 gap-12 lg:gap-6 items-center">
-
           {/* ── LEFT TEXT COLUMN ── */}
           <div className="lg:col-span-3 flex flex-col items-start">
-
             {/* Availability badge */}
             <div
               className="hero-badge glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold"
@@ -296,10 +295,7 @@ export function Hero() {
             </div>
 
             {/* Name */}
-            <p
-              className="hero-hi mt-7 text-lg"
-              style={{ color: "var(--muted-foreground)" }}
-            >
+            <p className="hero-hi mt-7 text-lg" style={{ color: "var(--muted-foreground)" }}>
               Hi, I'm
             </p>
             <h1
@@ -322,12 +318,12 @@ export function Hero() {
               className="hero-bio mt-5 max-w-xl leading-relaxed text-base"
               style={{ color: "var(--muted-foreground)" }}
             >
-              Software developer with a focus on AI, data, and scalable web experiences.
-              I lead engineering initiatives at{" "}
+              Software developer with a focus on AI, data, and scalable web experiences. I lead
+              engineering initiatives at{" "}
               <span style={{ color: "#00D4AA", fontWeight: 500 }}>GDG on Campus</span> and{" "}
-              <span style={{ color: "#7C6FE0", fontWeight: 500 }}>IEEE</span>,
-              ship real products across web and mobile, and contribute to open-source.
-              I care about writing clean code and building things people actually use.
+              <span style={{ color: "#7C6FE0", fontWeight: 500 }}>IEEE</span>, ship real products
+              across web and mobile, and contribute to open-source. I care about writing clean code
+              and building things people actually use.
             </p>
 
             {/* CTAs */}
@@ -356,7 +352,11 @@ export function Hero() {
             {/* Social icons */}
             <div className="hero-socials mt-7 flex items-center gap-3">
               {[
-                { Icon: Linkedin, href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
+                {
+                  Icon: Linkedin,
+                  href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+                  label: "LinkedIn",
+                },
                 { Icon: Github, href: "https://github.com/Payal-goell", label: "GitHub" },
                 { Icon: Mail, href: "mailto:payalgoel2006@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
@@ -413,7 +413,14 @@ export function Hero() {
               className="float-card glass-card absolute pointer-events-none"
               style={{ top: "52px", right: "0px", zIndex: 10 }}
             >
-              <span style={{ fontSize: "11px", fontWeight: 700, color: "#00D4AA", fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#00D4AA",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                }}
+              >
                 🌐 GDG Web Dev Lead
               </span>
             </div>
@@ -421,7 +428,14 @@ export function Hero() {
               className="float-card glass-card absolute pointer-events-none"
               style={{ bottom: "64px", left: "0px", zIndex: 10, animationDelay: "1.5s" }}
             >
-              <span style={{ fontSize: "11px", fontWeight: 700, color: "#7C6FE0", fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#7C6FE0",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                }}
+              >
                 📡 IEEE Webmaster
               </span>
             </div>
@@ -429,10 +443,18 @@ export function Hero() {
             {/* Profile picture */}
             <div
               className="relative z-10 hero-orbit-container"
-              style={{ width: "300px", height: "300px", display: "flex", alignItems: "center", justifyContent: "center" }}
+              style={{
+                width: "300px",
+                height: "300px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               {imgError ? (
-                <div className="profile-initials" aria-label="Payal Goel">PG</div>
+                <div className="profile-initials" aria-label="Payal Goel">
+                  PG
+                </div>
               ) : (
                 <img
                   src={profileImg}
@@ -443,7 +465,6 @@ export function Hero() {
               )}
             </div>
           </div>
-
         </div>
       </section>
     </>

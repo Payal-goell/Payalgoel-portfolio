@@ -37,7 +37,7 @@ export function Education() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -53,7 +53,9 @@ export function Education() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -62,8 +64,7 @@ export function Education() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-12"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Academic{" "}
-          <span className="text-gradient">Foundation</span>
+          Academic <span className="text-gradient">Foundation</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -111,7 +112,10 @@ export function Education() {
                 )}
               </div>
 
-              <h3 className="font-display font-bold text-base pl-3" style={{ color: "var(--foreground)" }}>
+              <h3
+                className="font-display font-bold text-base pl-3"
+                style={{ color: "var(--foreground)" }}
+              >
                 {e.degree}
               </h3>
               <p className="text-xs font-medium mt-0.5 pl-3" style={{ color: "#00D4AA" }}>

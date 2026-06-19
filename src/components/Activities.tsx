@@ -43,7 +43,7 @@ export function Activities() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -59,7 +59,9 @@ export function Activities() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -68,8 +70,7 @@ export function Activities() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-12"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Engineering{" "}
-          <span className="text-gradient">Leadership</span>
+          Engineering <span className="text-gradient">Leadership</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -87,13 +88,19 @@ export function Activities() {
               <div className="flex items-start gap-4">
                 <div
                   className="text-2xl w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${r.accentBorder}` }}
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    border: `1px solid ${r.accentBorder}`,
+                  }}
                 >
                   {r.icon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <h3 className="font-display font-bold text-lg" style={{ color: "var(--foreground)" }}>
+                    <h3
+                      className="font-display font-bold text-lg"
+                      style={{ color: "var(--foreground)" }}
+                    >
                       {r.role}
                     </h3>
                     <span
@@ -121,7 +128,10 @@ export function Activities() {
                       className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                       style={{ background: r.accent, opacity: 0.7 }}
                     />
-                    <span className="text-sm leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
+                    <span
+                      className="text-sm leading-relaxed"
+                      style={{ color: "var(--muted-foreground)" }}
+                    >
                       {b}
                     </span>
                   </li>

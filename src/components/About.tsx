@@ -33,7 +33,7 @@ export function About() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -49,7 +49,9 @@ export function About() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -58,8 +60,7 @@ export function About() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-12"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Engineering with{" "}
-          <span className="text-gradient">purpose.</span>
+          Engineering with <span className="text-gradient">purpose.</span>
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-10 items-start">
@@ -110,31 +111,35 @@ export function About() {
             style={{ color: "var(--muted-foreground)", animationDelay: "200ms" }}
           >
             <p>
-              I'm{" "}
-              <span style={{ color: "var(--foreground)", fontWeight: 600 }}>Payal Goel</span>
-              {" "}— a software developer specialising in AI-driven applications, data engineering,
-              and full-stack web development. I work across the entire product lifecycle, from
-              designing architecture to shipping production-ready features.
+              I'm <span style={{ color: "var(--foreground)", fontWeight: 600 }}>Payal Goel</span> —
+              a software developer specialising in AI-driven applications, data engineering, and
+              full-stack web development. I work across the entire product lifecycle, from designing
+              architecture to shipping production-ready features.
             </p>
             <p>
               As{" "}
-              <span style={{ color: "#00D4AA", fontWeight: 500 }}>Web Dev Co-Lead at GDG on Campus</span>
-              {" "}and{" "}
-              <span style={{ color: "#7C6FE0", fontWeight: 500 }}>Webmaster at IEEE</span>,
-              I oversee technical strategy, mentor engineers, and own the end-to-end delivery
-              of community platforms — from planning through deployment.
+              <span style={{ color: "#00D4AA", fontWeight: 500 }}>
+                Web Dev Co-Lead at GDG on Campus
+              </span>{" "}
+              and <span style={{ color: "#7C6FE0", fontWeight: 500 }}>Webmaster at IEEE</span>, I
+              oversee technical strategy, mentor engineers, and own the end-to-end delivery of
+              community platforms — from planning through deployment.
             </p>
             <p>
-              My work spans Python data pipelines, Android applications, and interactive
-              web interfaces. I approach every problem with an engineering mindset: understand
-              the requirements, prototype fast, and iterate toward something that's actually
-              useful — not just technically correct.
+              My work spans Python data pipelines, Android applications, and interactive web
+              interfaces. I approach every problem with an engineering mindset: understand the
+              requirements, prototype fast, and iterate toward something that's actually useful —
+              not just technically correct.
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1">
               {[
-                "Python", "Data Engineering", "Android / Flutter",
-                "Web Development", "AI & ML", "Open Source",
+                "Python",
+                "Data Engineering",
+                "Android / Flutter",
+                "Web Development",
+                "AI & ML",
+                "Open Source",
               ].map((tag) => (
                 <span
                   key={tag}

@@ -20,17 +20,17 @@
       (function () {
         const stored = localStorage.getItem("theme");
         const theme = stored === "light" ? "light" : "dark";
-        
+
         // Always apply dark mode by default for better UX
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
         }
-        
+
         // Apply fallback styles immediately
         document.documentElement.style.backgroundColor = theme === "dark" ? "#0A0F1C" : "#F7F9FC";
         document.documentElement.style.color = theme === "dark" ? "#F0EDE6" : "#0D1117";
       })();
-      
+
       // GitHub Pages single-page app redirect
       (function () {
         const redirect = sessionStorage.redirect;

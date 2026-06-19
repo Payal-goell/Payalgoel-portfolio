@@ -80,7 +80,8 @@ export function Navbar() {
                   if (!isActive) (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
                 }}
                 onMouseLeave={(e) => {
-                  if (!isActive) (e.currentTarget as HTMLElement).style.color = "var(--muted-foreground)";
+                  if (!isActive)
+                    (e.currentTarget as HTMLElement).style.color = "var(--muted-foreground)";
                 }}
               >
                 {l.label}

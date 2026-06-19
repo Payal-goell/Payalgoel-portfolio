@@ -6,14 +6,14 @@ const skillGroups = [
     accent: "teal",
     description: "Core languages across systems, web, and data domains",
     skills: [
-      { name: "Python",     icon: "🐍" },
+      { name: "Python", icon: "🐍" },
       { name: "JavaScript", icon: "⚡" },
-      { name: "C++",        icon: "⚙️" },
-      { name: "C",          icon: "🔩" },
-      { name: "Dart",       icon: "🎯" },
-      { name: "SQL",        icon: "🗄️" },
+      { name: "C++", icon: "⚙️" },
+      { name: "C", icon: "🔩" },
+      { name: "Dart", icon: "🎯" },
+      { name: "SQL", icon: "🗄️" },
       { name: "HTML / CSS", icon: "🌐" },
-      { name: "Java",       icon: "☕" },
+      { name: "Java", icon: "☕" },
     ],
   },
   {
@@ -21,11 +21,11 @@ const skillGroups = [
     accent: "teal",
     description: "Tools I use to ship faster and smarter",
     skills: [
-      { name: "Flutter",  icon: "🐦" },
-      { name: "Pandas",   icon: "🐼" },
-      { name: "NumPy",    icon: "🔢" },
-      { name: "React",    icon: "⚛️" },
-      { name: "Node.js",  icon: "🟢" },
+      { name: "Flutter", icon: "🐦" },
+      { name: "Pandas", icon: "🐼" },
+      { name: "NumPy", icon: "🔢" },
+      { name: "React", icon: "⚛️" },
+      { name: "Node.js", icon: "🟢" },
     ],
   },
   {
@@ -33,12 +33,12 @@ const skillGroups = [
     accent: "purple",
     description: "Environments, visualisation, and dev tooling",
     skills: [
-      { name: "Power BI",       icon: "📊" },
+      { name: "Power BI", icon: "📊" },
       { name: "Android Studio", icon: "📱" },
-      { name: "VS Code",        icon: "💻" },
-      { name: "Google Colab",   icon: "☁️" },
-      { name: "RStudio",        icon: "📐" },
-      { name: "Excel",          icon: "📈" },
+      { name: "VS Code", icon: "💻" },
+      { name: "Google Colab", icon: "☁️" },
+      { name: "RStudio", icon: "📐" },
+      { name: "Excel", icon: "📈" },
     ],
   },
   {
@@ -46,10 +46,10 @@ const skillGroups = [
     accent: "purple",
     description: "Professional strengths I bring to every project",
     skills: [
-      { name: "System Design",     icon: "🏗️" },
-      { name: "Data Analysis",     icon: "📉" },
+      { name: "System Design", icon: "🏗️" },
+      { name: "Data Analysis", icon: "📉" },
       { name: "Technical Writing", icon: "✍️" },
-      { name: "Team Leadership",   icon: "🎯" },
+      { name: "Team Leadership", icon: "🎯" },
     ],
   },
 ];
@@ -64,7 +64,7 @@ export function Skills() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -80,7 +80,9 @@ export function Skills() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(124,111,224,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(124,111,224,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -89,8 +91,7 @@ export function Skills() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-12"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Technical{" "}
-          <span className="text-gradient">Stack</span>
+          Technical <span className="text-gradient">Stack</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -100,9 +101,8 @@ export function Skills() {
               className="reveal glass rounded-2xl p-6"
               style={{
                 animationDelay: `${gi * 100}ms`,
-                borderColor: group.accent === "purple"
-                  ? "rgba(124,111,224,0.2)"
-                  : "rgba(0,212,170,0.15)",
+                borderColor:
+                  group.accent === "purple" ? "rgba(124,111,224,0.2)" : "rgba(0,212,170,0.15)",
               }}
             >
               {/* Header */}
@@ -110,9 +110,10 @@ export function Skills() {
                 <div
                   className="h-1 w-5 rounded-full mt-2 flex-shrink-0"
                   style={{
-                    background: group.accent === "purple"
-                      ? "linear-gradient(90deg,#7C6FE0,#B8A9FF)"
-                      : "linear-gradient(90deg,#00D4AA,#7DF9D9)",
+                    background:
+                      group.accent === "purple"
+                        ? "linear-gradient(90deg,#7C6FE0,#B8A9FF)"
+                        : "linear-gradient(90deg,#00D4AA,#7DF9D9)",
                   }}
                 />
                 <div>
@@ -122,10 +123,7 @@ export function Skills() {
                   >
                     {group.title}
                   </h3>
-                  <p
-                    className="text-xs mt-0.5"
-                    style={{ color: "var(--muted-foreground)" }}
-                  >
+                  <p className="text-xs mt-0.5" style={{ color: "var(--muted-foreground)" }}>
                     {group.description}
                   </p>
                 </div>
@@ -138,7 +136,9 @@ export function Skills() {
                     key={skill.name}
                     className={`skill-pill ${group.accent === "purple" ? "skill-pill-purple" : ""}`}
                   >
-                    <span role="img" aria-hidden="true">{skill.icon}</span>
+                    <span role="img" aria-hidden="true">
+                      {skill.icon}
+                    </span>
                     {skill.name}
                   </span>
                 ))}

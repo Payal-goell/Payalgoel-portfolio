@@ -36,6 +36,11 @@ const recognitions = [
 
 const certifications = [
   {
+    icon: "🏅",
+    title: "Badge from Microsoft",
+    issuer: "AI Skills Fest 2026",
+  },
+  {
     icon: "🎖️",
     title: "NPTEL — Joy of Computing using Python",
     issuer: "IIT Madras · Silver + Elite distinction",
@@ -77,7 +82,7 @@ export function Achievements() {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.06, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.06, rootMargin: "0px 0px -50px 0px" },
     );
     const el = ref.current;
     if (el) el.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
@@ -93,7 +98,9 @@ export function Achievements() {
     >
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(124,111,224,0.3), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(124,111,224,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl">
@@ -102,8 +109,7 @@ export function Achievements() {
           className="reveal font-display font-bold text-4xl sm:text-5xl mb-14"
           style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
         >
-          Awards &amp;{" "}
-          <span className="text-gradient">Credentials</span>
+          Awards &amp; <span className="text-gradient">Credentials</span>
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-10">
@@ -141,7 +147,10 @@ export function Achievements() {
                     />
                     <div
                       className="rounded-xl px-4 py-3 transition-all duration-200 cursor-default"
-                      style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(0,212,170,0.07)" }}
+                      style={{
+                        background: "rgba(255,255,255,0.025)",
+                        border: "1px solid rgba(0,212,170,0.07)",
+                      }}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget as HTMLElement;
                         el.style.background = "rgba(0,212,170,0.05)";
@@ -186,7 +195,9 @@ export function Achievements() {
             <div className="relative">
               <div
                 className="absolute left-4 top-0 bottom-0 w-px"
-                style={{ background: "linear-gradient(180deg, rgba(124,111,224,0.5), transparent)" }}
+                style={{
+                  background: "linear-gradient(180deg, rgba(124,111,224,0.5), transparent)",
+                }}
               />
               <div className="space-y-3 pl-12">
                 {certifications.map((c, i) => (
@@ -210,7 +221,10 @@ export function Achievements() {
                     />
                     <div
                       className="rounded-xl px-4 py-3 transition-all duration-200 cursor-default"
-                      style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(124,111,224,0.07)" }}
+                      style={{
+                        background: "rgba(255,255,255,0.025)",
+                        border: "1px solid rgba(124,111,224,0.07)",
+                      }}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget as HTMLElement;
                         el.style.background = "rgba(124,111,224,0.05)";

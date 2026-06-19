@@ -21,7 +21,10 @@ export function Footer() {
       {/* Top accent line */}
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,170,0.4), rgba(124,111,224,0.3), transparent)" }}
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(0,212,170,0.4), rgba(124,111,224,0.3), transparent)",
+        }}
       />
 
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -37,7 +40,11 @@ export function Footer() {
         {/* Social icons */}
         <div className="flex items-center gap-3">
           {[
-            { Icon: Linkedin, href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
+            {
+              Icon: Linkedin,
+              href: "https://www.linkedin.com/in/payal-goel-81b6a7339?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+              label: "LinkedIn",
+            },
             { Icon: Github, href: "https://github.com/Payal-goell", label: "GitHub" },
             { Icon: Mail, href: "mailto:payalgoel2006@gmail.com", label: "Email" },
           ].map(({ Icon, href, label }) => (
