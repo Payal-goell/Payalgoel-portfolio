@@ -39,17 +39,6 @@ const projects = [
     large: false,
   },
 
-  {
-    title: "Pharmacy Management System",
-    tags: ["Python", "MySQL", "Tkinter", "GUI", "Database"],
-    description:
-      "Built a pharmacy inventory and customer management system with Python and MySQL, featuring customer record handling, CRUD operations, automated database creation, and both CLI and GUI interfaces. Improved usability through a Tkinter-based desktop application and structured data management.",
-    github: "https://github.com/Payal-goell/Pharmaceutical_store_management_system.git",
-    live: null,
-    accentBar: "linear-gradient(90deg, #3B82F6, #06B6D4)",
-    image: null,
-    large: false,
-  }
 
 ];
 
