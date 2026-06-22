@@ -3,7 +3,6 @@ import { Github, ExternalLink } from "lucide-react";
 import portfolioImg from "@/assets/portfolio.png";
 import indiaTravelImg from "@/assets/india-travel-explorer.png";
 import foodDeliveryImg from "@/assets/food-delivery.png";
-import pharmacyManagementImg from "@/assets/pharmacy-management.png";
 
 const projects = [
   {
@@ -48,7 +47,7 @@ const projects = [
     github: "https://github.com/Payal-goell/Pharmaceutical_store_management_system.git",
     live: null,
     accentBar: "linear-gradient(90deg, #3B82F6, #06B6D4)",
-    image: pharmacyManagementImg,
+    image: null,
     large: false,
   }
 
@@ -110,11 +109,13 @@ export function Projects() {
               className="flex-shrink-0 flex items-center justify-center rounded-xl overflow-hidden border border-white/10"
               style={{ width: "100%", maxWidth: "180px", height: "130px" }}
             >
-              <img
-                src={first.image}
-                alt={first.title}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
+              {first.image && (
+                <img
+                  src={first.image}
+                  alt={first.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              )}
             </div>
             <div className="flex flex-col justify-between flex-1">
               <div>
@@ -183,11 +184,13 @@ export function Projects() {
                 className="flex items-center justify-center rounded-xl mb-5 overflow-hidden border border-white/10"
                 style={{ height: "140px" }}
               >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
+                {p.image && (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                )}
               </div>
               <div className="flex flex-wrap gap-1.5 mb-3">
                 {p.tags.map((t) => (
