@@ -3,6 +3,7 @@ import { Github, ExternalLink } from "lucide-react";
 import portfolioImg from "@/assets/portfolio.png";
 import indiaTravelImg from "@/assets/india-travel-explorer.png";
 import foodDeliveryImg from "@/assets/food-delivery.png";
+import pharmacyManagementImg from "@/assets/pharmacy-management.png";
 
 const projects = [
   {
@@ -32,12 +33,25 @@ const projects = [
     tags: ["React", "Node.js", "Express.js", "MongoDB", "Stripe", "JWT"],
     description:
       "A full-stack food ordering website built using the MERN stack. Features stripe payment integration, JSON Web Token (JWT) authentication, and an interactive frontend for seamless customer experience.",
-    github: "https://github.com/Payal-goell",
+    github: "https://github.com/Payal-goell/FOOD_DELIVERY.git",
     live: null,
     accentBar: "linear-gradient(90deg, #EF4444, #F97316)",
     image: foodDeliveryImg,
     large: false,
   },
+
+  {
+    title: "Pharmacy Management System",
+    tags: ["Python", "MySQL", "Tkinter", "GUI", "Database"],
+    description:
+      "Built a pharmacy inventory and customer management system with Python and MySQL, featuring customer record handling, CRUD operations, automated database creation, and both CLI and GUI interfaces. Improved usability through a Tkinter-based desktop application and structured data management.",
+    github: "https://github.com/Payal-goell/Pharmaceutical_store_management_system.git",
+    live: null,
+    accentBar: "linear-gradient(90deg, #3B82F6, #06B6D4)",
+    image: pharmacyManagementImg,
+    large: false,
+  }
+
 ];
 
 export function Projects() {
