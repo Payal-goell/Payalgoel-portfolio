@@ -2,7 +2,7 @@
 
 > A modern, responsive portfolio website showcasing skills, projects, and achievements as an AI & Data Science enthusiast.
 
-**🌐 [Visit Live Portfolio](https://Payalgoel-coder.github.io/payal-portfolio/)**
+**🌐 [Visit Live Portfolio](https://github.com/Payal-goell/Payalgoel-portfolio)**
 
 ---
 
