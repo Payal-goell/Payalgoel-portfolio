@@ -3,6 +3,7 @@ import { Github, ExternalLink } from "lucide-react";
 import portfolioImg from "@/assets/portfolio.png";
 import indiaTravelImg from "@/assets/india-travel-explorer.png";
 import foodDeliveryImg from "@/assets/food-delivery.png";
+import pharmacyManagementImg from "@/assets/pharmacy-management.png";
 
 const projects = [
   {
@@ -46,7 +47,7 @@ const projects = [
     github: "https://github.com/Payal-goell/Pharmaceutical_store_management_system.git",
     live: null,
     accentBar: "linear-gradient(90deg, #3B82F6, #06B6D4)",
-    image: null,
+    image: pharmacyManagementImg,
     large: false,
   }
 ];
