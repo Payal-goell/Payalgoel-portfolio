@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import profileImg from "@/assets/profile.png";
-import resumePdf from "@/assets/Payal_Goel_CV.pdf";
+import resumePdf from "@/assets/Payal_Goel_Resume_Updated.pdf";
 
 /* ─── Typewriter ────────────────────────────────────────────── */
 const phrases = [
