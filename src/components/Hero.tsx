@@ -337,7 +337,7 @@ export function Hero() {
               </a>
               <a
                 href={resumePdf}
-                download="Payal_Goel_CV.pdf"
+                download="Payal_Goel_Resume_Updated.pdf"
                 className="shimmer inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all hover:scale-105"
                 style={{
                   border: "1.5px solid rgba(0,212,170,0.5)",
